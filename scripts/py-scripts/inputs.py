@@ -24,7 +24,7 @@ def sanitize_app_list(app_list, micro):
     apps = []
     for app in app_list:
         app = app.strip()
-        if app.lower().strip() == "default":
+        if app.lower() == "default":
             apps.append(f"{micro}_rest")
         else:
             success =  False
