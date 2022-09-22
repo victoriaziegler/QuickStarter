@@ -23,6 +23,7 @@ def get_config_file():
 def sanitize_app_list(app_list, micro):
     apps = []
     for app in app_list:
+        app = app.strip()
         if app.lower().strip() == "default":
             apps.append(f"{micro}_rest")
         else:
@@ -117,13 +118,13 @@ def get_volume_and_main_port(config):
 
 def single_input(prompt, name_type):
     success = False
-    val = input(prompt)
+    val = input(prompt).strip()
     while not success:
         if validate_name(val):
             success = True
         else:
             name_input_error(val, name_type)
-            val = input(prompt)
+            val = input(prompt).strip()
     return str(val).strip()
 
 

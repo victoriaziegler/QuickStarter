@@ -13,8 +13,8 @@ clr="\033[00m"      # Reset
 alias 'python'="python3"
 alias 'bashrc'="code -r ~/.bashrc"
 
-source ~quickstarter/scripts/bash-scripts/ignition.sh
-source ~quickstarter/scripts/bash-scripts/die-docker-die.sh
-source ~quickstarter/scripts/bash-scripts/list_commands.sh
+source ~/quickstarter/scripts/bash-scripts/ignition.sh
+source ~/quickstarter/scripts/bash-scripts/die-docker-die.sh
+source ~/quickstarter/scripts/bash-scripts/list_commands.sh
 
 echo -e "${lt_ylw} For a list of project quick start commands, use command: coms"
