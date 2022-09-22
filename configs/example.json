@@ -1,0 +1,41 @@
+{
+  "main": {
+    "port": 8000,
+    "volume": "stuff"
+  },
+  "micros": {
+    "one": {
+      "apps": ["strange", "who", "no", "brown"],
+      "project": "doctors",
+      "port": 8100,
+      "poller": true
+    },
+    "cohort": {
+      "apps": ["instructors", "seirs", "students"],
+      "port": 8200,
+      "poller": true
+    },
+    "three": {
+      "apps": ["default", "other_app"],
+      "port": 8300,
+      "poller": false
+    },
+    "four": {
+      "port": 8400,
+      "poller": true
+    },
+    "five": {
+      "apps": ["schizoid", "man"],
+      "project": "crimson",
+      "port": 8500,
+      "poller": true
+    }
+  },
+  "queues":{
+    "one":["cohort@instructors", "cohort@seirs"],
+    "cohort":["three@default"],
+    "three":["one@who", "one@strange"],
+    "four":["one@who", "cohort@seirs"],
+    "five":["one@who"]
+  }
+}
