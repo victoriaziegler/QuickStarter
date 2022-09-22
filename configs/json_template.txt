@@ -1,0 +1,35 @@
+Template for json config
+
+
+
+Add main port and volume in config["main"]
+
+"main": {
+    "port": 8000,
+    "volume": "stuff"
+  },
+
+
+# For each microservice in your project, create a key that is the microservice name. Each microservice can have  key/value pairs.
+apps - a list of app names. To keep name_rest in the list, pass default in
+project - only add if changing name from default name_project
+
+"micros": {
+  "one": {
+    "apps": ["app1", "app2", "app3", ect...],
+    "project" "some_name"
+    "port": 8100,
+    "poller": true
+  },
+}
+
+
+
+At config["queues"], add queues to any microservices that need them. Keys will be the consumers. Each value will be a list containing the producer microservice@app
+
+"queues":{
+  "one":["micro2@app1", "micro3@default"],
+  "two":["micro1@app2"],
+  "three":["micro1@app1"]
+}
+

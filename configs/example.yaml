@@ -1,0 +1,32 @@
+
+main: {
+  port: 8000,
+  volume: stuff,
+}
+micros: {
+  one: {
+    apps: [app1, app2, app3],
+    port: 8100,
+    poller: True,
+  },
+  two: {
+    apps: [frodo, sam, merry, pippen],
+    project: "sauron",
+    port: 8200,
+    poller: True,
+  },
+  three: {
+    apps: [default, other_app],
+    port: 8300,
+    poller: True
+  },
+  four: {
+    port: 8400,
+    poller: True
+  },
+}
+queues: {
+  one: [three@default],
+  two: [one@app3, three@other_app],
+  four: [two@frodo, two@sam, one@app3],
+}
